@@ -2,6 +2,34 @@
 
 EasyChat 是一个基于 Expo + React Native + Gifted Chat 的移动聊天应用模板，后端通过 Vercel 云函数转发到 DeepSeek OpenAI 兼容接口。
 
+## GitHub 仓库
+
+```text
+https://github.com/pppxxxy/easychat
+```
+
+## Vercel 一键导入部署
+
+可以在浏览器打开下面的链接，把本仓库导入到 Vercel：
+
+```text
+https://vercel.com/new/clone?repository-url=https://github.com/pppxxxy/easychat
+```
+
+导入时在 Vercel 的 Environment Variables 中添加：
+
+```bash
+DEEPSEEK_API_KEY=你的 DeepSeek API Key
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-chat
+```
+
+部署完成后，云函数地址通常是：
+
+```text
+https://你的-vercel-项目名.vercel.app/api/chat
+```
+
 ## 目录结构
 
 ```text
@@ -27,22 +55,6 @@ easychat/
 ```bash
 npm install
 npm run start
-```
-
-## Vercel 云函数环境变量
-
-在 Vercel 项目中配置：
-
-```bash
-DEEPSEEK_API_KEY=你的 DeepSeek API Key
-DEEPSEEK_BASE_URL=https://api.deepseek.com
-DEEPSEEK_MODEL=deepseek-chat
-```
-
-云函数地址通常是：
-
-```text
-https://你的-vercel-项目名.vercel.app/api/chat
 ```
 
 ## 前端 API 地址
